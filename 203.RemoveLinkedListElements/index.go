@@ -30,3 +30,19 @@ func RemoveElements(head *ListNode, val int) *ListNode {
 
 	return head
 }
+
+func RemoveElementsWithDummyHead(head *ListNode, val int) *ListNode {
+	node := new(ListNode)
+	node.Next = head
+	pre, cur := node, head
+	for cur != nil {
+		if cur.Val == val {
+			pre.Next = cur.Next
+			cur = cur.Next
+		} else {
+			pre = cur
+			cur = cur.Next
+		}
+	}
+	return node.Next
+}
