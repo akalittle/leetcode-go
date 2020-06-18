@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	ln "github.com/soeyi/leetcode-go/21.MergeTwoSortedLists"
+
+	pl "github.com/soeyi/leetcode-go/234.PalindromeLinkedList"
 )
 
 func main() {
@@ -13,4 +15,11 @@ func main() {
 
 	fmt.Printf("res &+v", res)
 
+	l := &pl.ListNode{Val: 1, Next: &pl.ListNode{Val: 2, Next: &pl.ListNode{Val: 1}}}
+
+	c := pl.IsPalindrome(l)
+
+	fmt.Println("")
+
+	fmt.Println("c", c)
 }
