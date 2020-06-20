@@ -1,5 +1,10 @@
 package _203_RemoveLinkedListElements
 
+import (
+	"bytes"
+	"fmt"
+)
+
 //Remove all elements from a linked list of integers that have value val.
 //
 //Example:
@@ -12,11 +17,24 @@ type ListNode struct {
 	Next *ListNode
 }
 
+func ToString(l *ListNode) string {
+	buffer := bytes.Buffer{}
+	cur := l
+	for cur != nil {
+		buffer.WriteString(fmt.Sprint(cur.Val) + "->")
+		cur = cur.Next
+	}
+
+	buffer.WriteString("NULL")
+
+	return buffer.String()
+}
+
 func RemoveElements(head *ListNode, val int) *ListNode {
 
 	p := head
 
-	for p != nil && p.Next != nil {
+	for p.Next != nil {
 		if p.Next.Val == val {
 			p.Next = p.Next.Next
 		} else {
@@ -45,4 +63,18 @@ func RemoveElementsWithDummyHead(head *ListNode, val int) *ListNode {
 		}
 	}
 	return node.Next
+}
+
+func RemoveElementsWithRecursive(head *ListNode, val int) *ListNode {
+	if head == nil {
+		return nil
+	}
+
+	head.Next = RemoveElementsWithRecursive(head.Next, val)
+
+	if head.Val == val {
+		return head.Next
+	} else {
+		return head
+	}
 }
