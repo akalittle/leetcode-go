@@ -11,17 +11,18 @@ package _141_LinkedListCycle
 //Output: true
 //Explanation: There is a cycle in the linked list, where tail connects to the second node.
 
-Example 2:
+//Example 2:
+//
+//Input: head = [1, 2], pos = 0
+//Output: true
+//Explanation: There is a cycle in the linked list, where tail connects to the first node.
+//
+//Example 3:
+//
+//Input: head = [1], pos = -1
+//Output: false
+//Explanation: There is no cycle in the linked list.
 
-Input: head = [1, 2], pos = 0
-Output: true
-Explanation: There is a cycle in the linked list, where tail connects to the first node.
-
-Example 3:
-
-Input: head = [1], pos = -1
-Output: false
-Explanation: There is no cycle in the linked list.
 type ListNode struct {
 	Val  int
 	Next *ListNode
