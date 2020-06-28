@@ -27,6 +27,9 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// 若相交，链表A： a+c, 链表B : b+c. a+c+b = b+c+a 。则会在公共处c起点相遇。
+// 若不相交，a + b = b + a 。因此相遇处是 nil
+
 func GetIntersectionNode(headA, headB *ListNode) *ListNode {
 	if headA == nil || headB == nil {
 		return nil
