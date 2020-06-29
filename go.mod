@@ -1,4 +1,4 @@
-module github.com/soeyi/leetcode-go
+module github.com/akalittle/leetcode-go
 
 go 1.14
 
