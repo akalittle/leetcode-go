@@ -35,6 +35,7 @@ func Test_SymmetricTree(t *testing.T) {
 
 	for _, item := range tests {
 		ast.Equal(item.want, isSymmetric(item.args), "输入:%s", item.args)
+		ast.Equal(item.want, isSymmetricWithQueue(item.args), "输入:%s", item.args)
 
 	}
 }
