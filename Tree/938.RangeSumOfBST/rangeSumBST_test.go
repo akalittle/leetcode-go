@@ -36,6 +36,5 @@ func Test_rangSumBST(t *testing.T) {
 
 	for _, item := range tests {
 		ast.Equal(item.want, rangeSumBST(item.args, item.l, item.r), "输入:%s", item.args)
-
 	}
 }

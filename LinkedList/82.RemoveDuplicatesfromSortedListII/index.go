@@ -22,7 +22,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func DeleteDuplicates(head *ListNode) *ListNode {
+func DeleteDuplicatesSecond(head *ListNode) *ListNode {
 
 	if head == nil || head.Next == nil {
 		return head

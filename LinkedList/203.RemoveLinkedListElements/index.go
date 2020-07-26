@@ -1,10 +1,5 @@
 package LinkedList
 
-import (
-	"bytes"
-	"fmt"
-)
-
 //Remove all elements from a linked list of integers that have value val.
 //
 //Example:
@@ -15,19 +10,6 @@ import (
 type ListNode struct {
 	Val  int
 	Next *ListNode
-}
-
-func ToString(l *ListNode) string {
-	buffer := bytes.Buffer{}
-	cur := l
-	for cur != nil {
-		buffer.WriteString(fmt.Sprint(cur.Val) + "->")
-		cur = cur.Next
-	}
-
-	buffer.WriteString("NULL")
-
-	return buffer.String()
 }
 
 func RemoveElements(head *ListNode, val int) *ListNode {
