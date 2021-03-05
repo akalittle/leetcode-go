@@ -3,3 +3,5 @@
 Leetcode by golang.
 
 Add LCOF. 
+
+1
